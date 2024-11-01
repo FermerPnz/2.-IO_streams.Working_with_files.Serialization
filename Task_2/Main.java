@@ -1,6 +1,5 @@
 import java.io.*;
 import java.util.ArrayList;
-import java.util.List;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipOutputStream;
 
@@ -44,15 +43,15 @@ public class Main {
             zos.closeEntry();
         }
     }
+
     public static void dellFile(ArrayList<String> file) {
-    for (String arr : file){
-        File x = new File(arr);
-        if (x.delete()){
-            System.out.println("Файл " + x + " удален");
+        for (String arr : file) {
+            File x = new File(arr);
+            if (x.delete()) {
+                System.out.println("Файл " + x + " удален");
+            } else
+                System.out.println("Файл " + x + " невозможно удалть");
         }
-        else
-            System.out.println("Файл " + x + " невозможно удалть");
-    }
 
     }
 }
