@@ -20,7 +20,16 @@ public class Main {
 
         zipFiles("E:\\Games\\savegames\\games.zip", arr);
 
-        dellFile(arr);
+
+//        File del_1 = new File("E:\\Games\\savegames\\games_1.txt");
+//        File del_2 = new File("E:\\Games\\savegames\\games_1.txt");
+//        File del_3 = new File("E:\\Games\\savegames\\games_1.txt");
+//        if (del_1.delete()) {System.out.println("Файл " + del_1 + "удален");}
+//        if (del_2.delete()) {System.out.println("Файл " + del_1 + "удален");}
+//        if (del_3.delete()) {System.out.println("Файл " + del_1 + "удален");}
+
+
+        delFile(arr);
 
 
     }
@@ -44,7 +53,7 @@ public class Main {
         }
     }
 
-    public static void dellFile(ArrayList<String> file) {
+    public static void delFile(ArrayList<String> file) {
         for (String arr : file) {
             File x = new File(arr);
             if (x.delete()) {
